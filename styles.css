@@ -22,8 +22,12 @@ body{
 }
 #content{
     width: 90%;
-    background: darkkhaki;
     display: flex;
+    margin: 10px 0;
+    /*
+    equivalente a margin 10px 0
+     configura top bot esquerda e direita
+    */
 }
 #main-footer{
     width: 90%;
@@ -44,4 +48,55 @@ body{
 }
 #content>article{
     width: 85%;
+}
+.article-item{
+    display: flex;
+    justify-items: center;
+    background: darkkhaki;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.article-item:last-child{
+    margin-bottom: 0px;
+}
+.image{
+    width: 120px;
+    height: 120px;
+    background: green;
+    margin: 0;
+}
+.article-detail{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.article-detail>header{
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 5px;
+}
+.article-detail>footer{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 12px;
+
+}
+#main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+}
+#main-header>span{
+    display: flex;
+    width: 50px;
+    fill: currentColor;
+    color: gold;
+    margin-right: 10px;
+}
+#main-header>span>svg{
+    width: 50px;
+    height: 50px;
 }
