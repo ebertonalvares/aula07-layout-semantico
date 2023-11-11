@@ -1,11 +1,11 @@
-body{
+body {
     /*padding:Espaçamento da caixa para dentro
     margin:Espaçamento da caixa para fora 
     height:Altura da pagina
     width:Largura de texto
     font-family:As fontes usadas no documento 
      */
-    padding: 0;  
+    padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -16,11 +16,14 @@ body{
     padding-top: 50px;
 
 }
-#main-header{
+
+#main-header {
     width: 90%;
-    background: grey;
+    background: #222;
+    text-transform: uppercase;
 }
-#content{
+
+#content {
     width: 90%;
     display: flex;
     margin: 10px 0;
@@ -29,75 +32,195 @@ body{
      configura top bot esquerda e direita
     */
 }
-#main-footer{
+
+#main-footer {
     width: 90%;
-    background: coral;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
 }
-#content>nav{
+
+#content>nav {
     margin-right: 10px;
-    background: orange;
+    background: #ededed;
     width: 15%;
     padding-left: 20px;
+    border-radius: 8px;
+    border: 1px solid #3d3d3d;
 }
-#content>nav>ul{
+
+#content>nav>ul {
     padding: 0;
 
 }
-#content>nav>ul>li{
+
+#content>nav>ul>li {
     list-style: none;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #3d3d3d;
 }
-#content>article{
+
+#content>#articles {
     width: 85%;
 }
-.article-item{
+
+.article-item {
     display: flex;
-    justify-items: center;
-    background: darkkhaki;
+    align-items: center;
+    background: #ededed;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #3d3d3d;
 }
-.article-item:last-child{
+
+.article-item:last-child {
     margin-bottom: 0px;
 }
-.image{
-    width: 100%;
-    height: 100%;
+
+.image {
+    width: 150px;
+    height: 150px;
     background: green;
     margin: 0;
     margin-right: 5px;
     display: flex;
+    flex-direction: column;
 }
-.article-detail{
-    width: auto;
+.image>figure{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.image>figure>img{
+    width: 100%;
+    height: 100%;
+    
+}
+.image>figure>figcaption{
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+.article-detail {
+    width: 500px;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
 }
-.article-detail>header{
+
+.article-detail>header {
     font-weight: 600;
     font-size: 22px;
     margin-top: 5px;
 }
-.article-detail>footer{
+
+.article-detail>footer {
     font-weight: 500;
     font-style: italic;
     font-size: 12px;
 
 }
-#main-header{
+
+#main-header {
     display: flex;
     justify-content: center;
     align-items: center;
     color: gold;
 }
-#main-header>span{
+
+#main-header>span {
     display: flex;
-    width: 50px;
     fill: currentColor;
     color: gold;
     margin-right: 10px;
 }
-#main-header>span>svg{
+
+#main-header>span>svg {
     width: 50px;
     height: 50px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .article-detail {
+        width: 280px;
+    }
+    .image{
+        width: 130px;
+        height: 130px;
+    }
+    #content{
+        flex-direction: column;
+        width: 90%;
+    }
+    #content>nav{
+        padding: 0;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    #content>nav>ul{
+        display: flex;
+        margin: 10px 10px;
+        justify-content: space-around;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+    }
+    #content>#articles{
+        width: 100%;
+    }
+    .article-item{
+        flex-direction: column;
+    }
+    .article-detail {
+        width: 320px;
+    }
+    .image{
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .article-detail {
+        width: 430px;
+    }
+    .image{
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .article-detail {
+        width: 600px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .article-detail {
+        width: 800px;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+    .article-detail {
+        width: 1200px;
+    }
 }
